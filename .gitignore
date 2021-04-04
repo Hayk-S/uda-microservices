@@ -1,2 +1,3 @@
 set_env.sh
 deploy/*secret.yaml
+deploy/env-configmap.yaml
