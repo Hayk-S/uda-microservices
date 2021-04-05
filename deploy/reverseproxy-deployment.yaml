@@ -6,13 +6,16 @@ metadata:
   name: reverseproxy
 spec:
   replicas: 2
+  selector:
+    matchLabels:
+        service: reverseproxy
   template:
     metadata:
       labels:
         service: reverseproxy
     spec:
       containers:
-      - image: reverseproxy
+      - image: hayk5555/reverseproxy
         name: reverseproxy
         imagePullPolicy: Always          
         resources:
